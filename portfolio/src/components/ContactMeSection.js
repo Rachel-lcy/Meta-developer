@@ -53,8 +53,9 @@ const LandingSection = () => {
         }
       }, [response, onOpen, formik.values.firstName]);
      },
+    
   });
-
+  
   return (
     <FullScreenSection
       isDarkBackground
@@ -92,11 +93,9 @@ const LandingSection = () => {
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Input
+                <Select id="type" name="type"
                 {...formik.getFieldProps('type')}
-                placeholder = "Enquiry type"
-                />
-                <Select id="type" name="type">
+                placeholder = "Enquiry type" >
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
                     Open source consultancy session
