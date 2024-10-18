@@ -36,7 +36,9 @@ const LandingSection = () => {
     }),
 
     onSubmit: async (values, { resetForm }) => {
+      console.log(values)
       const result = await submit(values);
+     
       useEffect(() => {
         if (response?.type === 'success') {
           onOpen({
